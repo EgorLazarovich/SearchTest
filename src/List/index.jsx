@@ -7,18 +7,23 @@ export default class Search extends Component {
         onLineItemClick() {}
     };
 
+    /**
+     * Process clicking list items
+     * @param {object} e
+     */
     onClick(e) {
-        debugger;
+        const element = e.target;
+        const text = element.textContent || element.innerText
+        this.props.onLineItemClick(text)
     }
 
     render() {
-        debugger;
         let key = 0;
-        const itemsTemplate = this.props.items.map(({ text }) => {
+        const itemsTemplate = this.props.items.map((data) => {
             key++;
-            return (<li key={key} className="list-item">{text}</li>);
+            const { text } = data;
+            return (<li key={key}  className="list-item">{text}</li>);
         });
-        debugger;
         return <ul className="list" onClick={this.onClick.bind(this)}>{itemsTemplate}</ul>;
     }
 }
