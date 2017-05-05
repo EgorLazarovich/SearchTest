@@ -1,0 +1,38 @@
+.content {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-component {
+
+}
+
+.search-input {
+    display: flex;
+    position: relative;
+    width: 700px;
+}
+
+.search-input::before {
+    content: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAAQJJREFUKBWVkr2uQUEUhf3ET6GRaC5aFRoJKrf1BKpb8SwqovYGXkCj00k0QnRKEYkILYobvpUYmeMMyVnJl7P3mjN7Zu9zwiGv2qRFyMMSRrAFp6JPN8XzBj+wgDkUYAg7WINTYdwpDECxrRLJHeq2accdkgm8bzTvNAg2EDOGeUYI1KNO1gkuzTA1g8T7ojbn4ONQWPuHPWgeHmnzCqoe15tkSNPgPEAn68oVcOmA2XMtGK9FoE/VhOTTVNExqLCGZnxCv2pYauEC6lF0oQxX6IOvb7yX9NPEQafan+aPXDdQC18LsO6Tip5BBY6gIQaSbnMCFRCBZRcIvFkbsvCr4AFGOCxQy+JdGQAAAABJRU5ErkJggg==');
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 5px;
+    left: 7px;
+    line-height: 32px;
+    opacity: 0.6;
+}
+
+.search-input > input {
+    width: 100%;
+    padding: 5px 10px 5px 25px;
+    height: 32px;
+    border: 1px solid #b4b4b4;
+}
+
+.list {
+    position: absolute;
+}
